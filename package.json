@@ -19,6 +19,7 @@
     "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
+    "@compodoc/compodoc": "^1.2.1",
     "@faker-js/faker": "10.1.0",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",

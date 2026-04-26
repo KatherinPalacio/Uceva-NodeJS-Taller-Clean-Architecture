@@ -11,6 +11,30 @@ export class CategoriesRoutes {
     const getAllCategories = new GetAllCategoriesUseCase(repository);
     const controller = new CategoriesController(getAllCategories);
 
+    /**
+ * @openapi
+ * /api/categories/{countCategories}:
+ *   get:
+ *     summary: Obtener listado de categorías
+ *     description: Retorna una lista de categorías generadas dinámicamente según la cantidad solicitada.
+ *     tags:
+ *       - Categories
+ *     parameters:
+ *       - in: path
+ *         name: countCategories
+ *         required: true
+ *         schema:
+ *           type: integer
+ *           minimum: 1
+ *           example: 5
+ *         description: Cantidad de categorías a generar
+ *     responses:
+ *       200:
+ *         description: Lista de categorías generadas
+ *       400:
+ *         description: Parámetro inválido
+ */
+router.get("/:countCategories", controller.getAllCategories);
     router.get("/:countCategories", controller.getAllCategories);
 
     return router;
