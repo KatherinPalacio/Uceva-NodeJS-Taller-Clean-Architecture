@@ -34,11 +34,13 @@ export interface Category {
   name: string;
 
   /**
+   * 
    * Descripción informativa de la categoría.
    *
    * @remarks
    * Explica qué tipo de películas agrupa esta categoría.
    * Ejemplo: 'Películas más vistas por los usuarios'.
+   * 
    */
   description: string;
 }
